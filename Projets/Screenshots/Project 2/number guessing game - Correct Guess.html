@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Number Guessing Game</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guess The Number</h1>
+    <p>
+        We have selected a random number
+        between 1 - 20. See if you can
+        guess it.
+    </p>
+
+
+<script type="text/javascript">
+
+let secret = Math.floor(Math.random() * 20 + 1);
+let int1 =1;
+
+while (int1<20)
+{
+let answer = parseInt(prompt('Guess the number between 1 and 20 inclusive'));
+if (answer < secret)
+    {
+	alert("Incorrect, too low!  Your guess: " +answer)
+	
+    //let answer3 = parseInt(prompt('Guess the number between 1 and 20 inclusive'));
+	//let answer = secret;
+	}
+else if (answer > secret)
+     
+    {
+	alert("Incorrect, too high!  Your guess: " + answer )
+	
+	document.location.reload();
+	//document.location.reload();
+	}
+
+else if (answer == secret)
+	{alert('Correct Guess!' )
+
+break;}
+//document.location.reload();
+//answer = Math.floor(Math.random() * 20 + 1);
+int1++;
+}
+
+    </script>
+
+
+</body>
+
+</html>
